@@ -22,7 +22,7 @@
     "int53": "^0.2.4",
     "object-stream": "0.0.1",
     "snappyjs": "^0.6.0",
-    "thrift": "^0.11.0",
+    "thrift": "^0.14.2",
     "varint": "^5.0.0"
   },
   "optionalDependencies": {
