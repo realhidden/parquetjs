@@ -105,7 +105,9 @@ async function writeTestFile(opts) {
 
   let rows = mkTestRows(opts);
 
-  rows.forEach(async row => await writer.appendRow(row));
+  for (const row of rows) {
+    await writer.appendRow(row);
+  }
 
   await writer.close();
 }
@@ -284,7 +286,7 @@ async function readTestFile() {
     assert.equal(await cursor.next(), null);
   }
 
-  reader.close();
+  await reader.close();
 }
 
 describe('Parquet', function() {
@@ -366,7 +368,12 @@ describe('Parquet', function() {
 
       var ostream = fs.createWriteStream('fruits_stream.parquet');
       let istream = objectStream.fromArray(mkTestRows());
-      istream.pipe(transform).pipe(ostream);
+      
+      return new Promise((resolve, reject) => {
+        ostream.on('finish', resolve);
+        ostream.on('error', reject);
+        istream.pipe(transform).pipe(ostream);
+      });
     });
 
   });
