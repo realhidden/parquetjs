@@ -66,7 +66,8 @@ ttypes.CompressionCodec = {
   'SNAPPY' : 1,
   'GZIP' : 2,
   'LZO' : 3,
-  'BROTLI' : 4
+  'BROTLI' : 4,
+  'ZSTD' : 6
 };
 ttypes.PageType = {
   'DATA_PAGE' : 0,

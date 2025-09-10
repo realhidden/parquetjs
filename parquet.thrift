@@ -329,6 +329,7 @@ enum CompressionCodec {
   GZIP = 2;
   LZO = 3;
   BROTLI = 4;
+  ZSTD = 6;
 }
 
 enum PageType {
