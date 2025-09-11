@@ -36,7 +36,10 @@
   "scripts": {
     "test": "mocha",
     "test:coverage": "nyc mocha",
-    "coverage": "nyc mocha && nyc report --reporter=html"
+    "coverage": "nyc mocha && nyc report --reporter=html",
+    "benchmark": "node benchmark.js",
+    "benchmark:optimized": "node benchmark-optimized.js",
+    "benchmark:compare": "node quick-comparison.js"
   },
   "nyc": {
     "include": [

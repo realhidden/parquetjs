@@ -10,7 +10,9 @@
       "Bash(npx nyc mocha:*)",
       "Bash(npx nyc report:*)",
       "Bash(node:*)",
-      "Bash(npm run test:coverage:*)"
+      "Bash(npm run test:coverage:*)",
+      "Bash(time npm test)",
+      "Bash(npm run benchmark:compare:*)"
     ],
     "deny": [],
     "ask": []
