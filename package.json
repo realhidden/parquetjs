@@ -30,7 +30,9 @@
   },
   "devDependencies": {
     "chai": "^6.0.1",
+    "fast-json-stringify": "^6.0.1",
     "mocha": "^11.7.2",
+    "msgpack-lite": "^0.1.26",
     "nyc": "^17.1.0"
   },
   "scripts": {
@@ -39,7 +41,10 @@
     "coverage": "nyc mocha && nyc report --reporter=html",
     "benchmark": "node benchmark.js",
     "benchmark:optimized": "node benchmark-optimized.js",
-    "benchmark:compare": "node quick-comparison.js"
+    "benchmark:compare": "node quick-comparison.js",
+    "benchmark:extreme": "node extreme-benchmark.js",
+    "benchmark:ultimate": "node ultimate-comparison.js",
+    "profile": "node profiler.js"
   },
   "nyc": {
     "include": [
